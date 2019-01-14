@@ -1,2 +1,2 @@
-# BereznjakJ
+# bereznjak
 Мій перший хостинг
