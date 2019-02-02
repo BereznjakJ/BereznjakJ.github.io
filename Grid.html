@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<meta charset="utf-8">
+<title>Березняк</title>
+
+<style type="text/css">
+ @media screen and (min-width: 1024px){
+ body{
+ padding: 20px;
+ font-family: areal;
+ 
+ }
+ .wrapper{
+ display: grid;
+ grid-template-columns: 50% repeat(2,1fr);
+ grid-template-rows: repeat(2,120px) repeat(2, 1fr);
+ }
+ .box1{
+ grid-column:1/2;
+ grid-row:1/5;
+ padding:10px;
+ }
+ .box2{
+ grid-column:2/3;
+ grid-row:1/2;
+ background-color: pink;
+ color:white;
+ font-size: 17pt;
+ display: flex;
+ justify-content:center;
+ align-items: center;
+ }
+ .box3{
+ grid-column:3/4;
+ grid-row:1/2;
+ background-color: Orchid ;
+ color:white;
+ font-size: 17pt;
+ display: flex;
+ justify-content:center;
+ align-items: center;
+ }
+ .box4{
+ grid-column:2/4;
+ grid-row:2/3;
+ display: flex;
+ justify-content:center;
+ align-items: center;
+ }
+ .box5{
+ grid-column:2/3;
+ grid-row:3/5;
+ padding-top:15px;
+ display: flex;
+ justify-content:center;
+ }
+ .box6{
+ grid-column:3/4;
+ grid-row:3/4;
+ background-color: LightSteelBlue  ;
+ padding:10px;
+ }
+ .box7{
+ grid-column:3/4;
+ grid-row:4/5;
+ background-color: pink;
+ padding:10px;
+ }
+ .mtext{
+ align-items: right;
+padding: 10px;
+ 
+ }
+ img{
+ float:left;
+ width:200px;
+ 
+ padding-right: 10px;
+ }
+ h1{
+ color:pink;
+ }
+ div{
+ border: 2px solid Orchid ;
+ }
+ }
+ 
+ 
+ 
+ @media(min-width: 690px)and (max-width: 1024px){
+ body{
+ padding: 20px;
+ font-family: areal;
+ }
+ .wrapper{
+ display: grid;
+ grid-template-columns: 50% repeat(2,1fr);
+ grid-template-rows: repeat(2,120px) repeat(2, 1fr);
+ }
+ .box1{
+ grid-column:1/2;
+ grid-row:1/5;
+ padding:10px;
+ }
+ .box2{
+ grid-column:2/3;
+ grid-row:1/2;
+ background-color: pink;
+ color:white;
+ font-size: 17pt;
+ display: flex;
+ justify-content:center;
+ align-items: center;
+ }
+ .box3{
+ grid-column:3/4;
+ grid-row:1/2;
+ background-color: Orchid ;
+ color:white;
+ font-size: 17pt;
+ display: flex;
+ justify-content:center;
+ align-items: center;
+ }
+ .box4{
+ grid-column:2/4;
+ grid-row:2/3;
+ display: flex;
+ justify-content:center;
+ align-items: center;
+ }
+ .box5{
+ grid-column:2/3;
+ grid-row:3/5;
+ padding-top:15px;
+ display: flex;
+ justify-content:center;
+ }
+ .box6{
+ grid-column:3/4;
+ grid-row:3/4;
+ background-color: LightSteelBlue  ;
+ padding:10px;
+ }
+ .box7{
+ grid-column:3/4;
+ grid-row:4/5;
+ background-color: pink;
+ padding:10px;
+ }
+ .mtext{
+ align-items: right;
+ padding: 10px;
+ 
+ }
+ img{
+ float:left;
+ padding-right: 10px;
+ width:200px;
+  max-width: 100%;
+   height: auto;
+  
+ }
+ h1{
+ color:pink;
+ }
+ div{
+ border: 2px solid Orchid ;
+ }
+ }
+ 
+ 
+@media screen and (max-width: 690px){
+ body{
+ padding: 20px;
+ font-family: areal;
+ }
+ .wrapper{
+ display: grid;
+ grid-template-columns: 50% repeat(2,1fr);
+ grid-template-rows: repeat(2,120px) repeat(2, 1fr);
+ }
+ .box1{
+ grid-column:1/2;
+ grid-row:1/5;
+ padding:10px;
+ }
+ .box2{
+ grid-column:2/3;
+ grid-row:1/2;
+ background-color: pink;
+ color:white;
+ font-size: 17pt;
+ display: flex;
+ justify-content:center;
+ align-items: center;
+ }
+ .box3{
+ grid-column:3/4;
+ grid-row:1/2;
+ background-color: Orchid ;
+ color:white;
+ font-size: 17pt;
+ display: flex;
+ justify-content:center;
+ align-items: center;
+ }
+ .box4{
+ grid-column:2/4;
+ grid-row:2/3;
+ display: flex;
+ justify-content:center;
+ align-items: center;
+ }
+ .box5{
+ grid-column:2/3;
+ grid-row:3/5;
+ padding-top:15px;
+ display: flex;
+ justify-content:center;
+ }
+ .box6{
+ grid-column:3/4;
+ grid-row:3/4;
+ background-color: LightSteelBlue  ;
+ padding:10px;
+ }
+ .box7{
+ grid-column:3/4;
+ grid-row:4/5;
+ background-color: pink;
+ padding:10px;
+ }
+ .mtext{
+align-items:right;
+padding: 10px;
+ }
+ img{
+ float:left;
+ padding-right: 10px;
+ width:200px;
+  max-width: 100%;
+   height: auto;
+   
+ }
+ h1{
+ color:pink;
+ }
+ div{
+ border: 2px solid Orchid ;
+ }
+ }
+ </style>
+</head>
+<body>
+<div class="wrapper">
+<div class="box1">
+<h1 color="pink">Я заголовок 1 уровня</h1>
+<img src="https://grandgames.net/puzzle/source_v/haski_2.jpg" >
+<p class="mtext">Ха́ски (англ. Husky) — общее название для нескольких пород ездовых собак, выведенных в северных регионах, которые отличаются быстрой манерой тянуть упряжку. Они представляют собой постоянно меняющуюся помесь из самых быстрых собак. Аляскинский маламут, напротив, является самой крупной и самой мощной ездовой собакой, и использовался для более тяжёлых нагрузок. Хотя доставка грузов и людей при помощи собачьих упряжек во многом ушла в историю, в последние годы многие компании предлагают туристам прокатиться на собачьих упряжках в заснеженных регионах. Хаски сегодня содержат как домашних животных; существуют группы людей, которые занимаются тем, что ищут пристанище ушедшим на покой по старости ездовым собакам.</p>
+</div>
+<div class="box2">
+<p>Главная</p>
+</div>
+<div class="box3"><p>Новости</p></div>
+<div class="box4"><h2>Я заголовок 2 уровня</h2></div>
+<div class="box5">
+<img src="https://grandgames.net/puzzle/source_v/haski_2.jpg" ></div>
+<div class="box6"><p>Ха́ски (англ. Husky) — общее название для нескольких пород ездовых собак, выведенных в северных регионах, которые отличаются быстрой манерой тянуть упряжку. Они представляют собой постоянно меняющуюся помесь из самых быстрых собак. Аляскинский маламут, напротив, является самой крупной и самой мощной ездовой собакой, и использовался для более тяжёлых нагрузок.</p>
+</div>
+<div class="box7"><p>Хотя доставка грузов и людей при помощи собачьих упряжек во многом ушла в историю, в последние годы многие компании предлагают туристам прокатиться на собачьих упряжках в заснеженных регионах. Хаски сегодня содержат как домашних животных; существуют группы людей, которые занимаются тем, что ищут пристанище ушедшим на покой по старости ездовым собакам.</p></div>
+</div>
+
+</body>
+</html>
