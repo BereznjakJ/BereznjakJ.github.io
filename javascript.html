@@ -1,0 +1,68 @@
+<! DOCTYPE html>
+<html>
+<head>
+
+<meta charset="utf-8">
+<title>Березняк</title>
+<script type="text/javascript" charset="utf-8" id="zm-extension" src="moz-extension://c0d2d1fb-f4ce-48ef-8dc3-f537e2223ac8/scripts/webrtc-patch.js" async=""></script>
+<style type="text/css">
+ .text{
+width:300 ;
+}
+.grade{
+width: 70;
+}
+</style>
+
+</head>
+<body>
+<h1>Для абітурієнта!</h1>
+<p>П.І.Б.</p>
+<input class="text" id="nm" type="text" value="" required>
+<p>Дата народження</p>
+<input  id="data" type="date" value="2018-07-22" min="1999-01-01" max="2019-01-01">
+<p>Адреса</p>
+<input id="address" class="text" type="text" value="" required>
+<input id="com" type="checkbox" checked> Проживаю в місті
+<p>Номер моб. телефону</p>
+<input id="mob" class="text" type="text" value="" required>
+<p>Стать</p>
+<input id="" type="radio" name="choise" checked> Жіноча 
+<input type="radio" name="choise" checked>Чоловічна
+<p>Оцінка з математики</p>
+<input class="grade" id="math" type="number" value="" required >
+<p>Оцінка з української мови</p>
+<input  class="grade" id="mova" type="number" value="" required >
+<p>Ваше фото</p>
+<input type="file" id="foto">
+<input type="button" value="Перевірити" onclick="someFunc()">
+<script type="text/javascript">
+function someFunc(){
+			Win = window.open("about:blank","exemple",'width=800,height=600,top=30,left=300');
+		var elem = document.getElementById("nm").value;
+			Win.document.write("П.І.Б: "+" "+elem+"<br>");
+		var elem1 = document.getElementById("data").value;
+			Win.document.write("Дата народження: "+" "+elem1+"<br>");
+		var elem2 = document.getElementById("address").value;
+			Win.document.write("Адреса: "+" "+elem2+"<br>");
+		var elem3 = document.getElementById("com").value;
+			elem3.onclick= function(){
+			if (elem3.checked){
+			Win.document.write("Комерційник" +"<br>");}
+			 else {Win.document.write("");}}
+		var elem4 = document.getElementById("mob").value;
+			Win.document.write("Номер телефона: "+" "+elem4+"<br>");
+		var elem5 = document.getElementById("foto").value;
+			Win.document.write( elem5+"<br>");
+		
+		var k = parseInt(document.getElementById("math").value)+parseInt(document.getElementById("mova").value);
+			Win.document.write("Сума oцінок: "+k);
+		}
+		function someFunc2(){
+			Win.close();
+		}
+</script>
+</body>
+</html>
+
+
