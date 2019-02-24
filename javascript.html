@@ -18,12 +18,12 @@ width: 70;
 <body>
 <h1>Для абітурієнта!</h1>
 <p>П.І.Б.</p>
-<input class="text" id="nm" type="text" value="" required>
+<input class="text" id="personaldata" type="text" value="" required>
 <p>Дата народження</p>
-<input  id="data" type="date" value="2018-07-22" min="1999-01-01" max="2019-01-01">
+<input  id="birthday" type="date" value="2018-07-22" min="1999-01-01" max="2019-01-01">
 <p>Адреса</p>
 <input id="address" class="text" type="text" value="" required>
-<input id="com" type="checkbox" checked> Проживаю в місті
+<input id="incity" type="checkbox" checked> Проживаю в місті
 <p>Номер моб. телефону</p>
 <input id="mob" class="text" type="text" value="" required>
 <p>Стать</p>
@@ -37,30 +37,33 @@ width: 70;
 <input type="file" id="foto">
 <input type="button" value="Перевірити" onclick="someFunc()">
 <script type="text/javascript">
-function someFunc(){
-			Win = window.open("about:blank","exemple",'width=800,height=600,top=30,left=300');
-		var elem = document.getElementById("nm").value;
-			Win.document.write("П.І.Б: "+" "+elem+"<br>");
-		var elem1 = document.getElementById("data").value;
-			Win.document.write("Дата народження: "+" "+elem1+"<br>");
-		var elem2 = document.getElementById("address").value;
-			Win.document.write("Адреса: "+" "+elem2+"<br>");
-		var elem3 = document.getElementById("com").value;
-			elem3.onclick= function(){
-			if (elem3.checked){
-			Win.document.write("Комерційник" +"<br>");}
-			 else {Win.document.write("");}}
-		var elem4 = document.getElementById("mob").value;
-			Win.document.write("Номер телефона: "+" "+elem4+"<br>");
-		var elem5 = document.getElementById("foto").value;
-			Win.document.write( elem5+"<br>");
-		
-		var k = parseInt(document.getElementById("math").value)+parseInt(document.getElementById("mova").value);
-			Win.document.write("Сума oцінок: "+k);
-		}
-		function someFunc2(){
-			Win.close();
-		}
+
+    function someFunc() {
+      let result = `П.І.Б: ${document.getElementById("personaldata").value} <br>
+                  Дата народження: ${document.getElementById("birthdate").value} <br>
+                  Адреса: ${document.getElementById("address").value} <br>`;
+      let incity = document.getElementById("incity");
+        if (incity.checked) {
+          result += 'Комерційник <br>';
+        }
+      let sumOfMarks = parseInt(document.getElementById("math").value) + parseInt(document.getElementById("mova").value);
+      result += `Номер телефона: ${document.getElementById("phone").value} <br>
+                ${document.getElementById("photo").value} <br>
+                Сума oцінок: ${sumOfMarks} <br>`;
+      let genderValues = document.getElementsByName("gender");
+      if(genderValues[0].checked){
+        result += 'Стать: Жіноча';
+      } else if(genderValues[1].checked){
+        result += 'Стать: Чоловіча';
+      }
+      var Win = window.open("about:blank", "example", 'width=800,height=600,top=30,left=300');
+      Win.document.write(result);
+    }
+
+    function someFunc2() {
+      Win.close();
+    }
+  
 </script>
 </body>
 </html>
