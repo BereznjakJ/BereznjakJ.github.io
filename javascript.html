@@ -1,43 +1,46 @@
 <!DOCTYPE html>
 <html>
-<head>
 
-<meta charset="utf-8">
-<title>Березняк</title>
-<script type="text/javascript" charset="utf-8" id="zm-extension" src="moz-extension://c0d2d1fb-f4ce-48ef-8dc3-f537e2223ac8/scripts/webrtc-patch.js" async=""></script>
-<style type="text/css">
- .text{
-width:300 ;
-}
-.grade{
-width: 70;
-}
-</style>
+<head>
+  <meta charset="utf-8">
+  <title>Березняк</title>
+  <script type="text/javascript" charset="utf-8" id="zm-extension" src="moz-extension://c0d2d1fb-f4ce-48ef-8dc3-f537e2223ac8/scripts/webrtc-patch.js" async=""></script>
+  <style type="text/css">
+    .text {
+      width: 300;
+    }
+
+    .grade {
+      width: 70;
+    }
+  </style>
 
 </head>
-<body>
-<h1>Для абітурієнта!</h1>
-<p>П.І.Б.</p>
-<input class="text" id="personaldata" type="text" value="" required="">
-<p>Дата народження</p>
-<input  id="birthdate" type="date" value="2018-07-22" min="1999-01-01" max="2019-01-01">
-<p>Адреса</p>
-<input id="address" class="text" type="text" value="" required="">
-<input id="incity" type="checkbox" checked> Проживаю в місті
-<p>Номер моб. телефону</p>
-<input id="mob" class="text" type="text" value="" required="">
-<p>Стать</p>
-<input name="gender" type="radio" name="choise" checked=""> Жіноча 
-<input  name="gender" type="radio" name="choise" >Чоловічна
-<p>Оцінка з математики</p>
-<input class="grade" id="math" type="number" value="" required="">
-<p>Оцінка з української мови</p>
-<input  class="grade" id="mova" type="number" value="" required="">
-<p>Ваше фото</p>
-<input type="file" id="foto">
-<input type="button" value="Перевірити" onclick="someFunc()">
-<script type="text/javascript">
 
+<body>
+  <h1>Для абітурієнта!</h1>
+  <form name="for-student">
+    <p>П.І.Б.</p>
+    <input class="text" id="personaldata" type="text" value="" required>
+    <p>Дата народження</p>
+    <input id="birthdate" type="date" value="2018-07-22" min="1999-01-01" max="2019-01-01">
+    <p>Адреса</p>
+    <input id="address" class="text" type="text" value="" required>
+    <input id="incity" type="checkbox" checked> Проживаю в місті
+    <p>Номер моб. телефону</p>
+    <input id="phone" class="text" type="text" value="" required>
+    <p>Стать</p>
+    <input type="radio" name="gender" checked> Жіноча
+    <input type="radio" name="gender">Чоловічна
+    <p>Оцінка з математики</p>
+    <input class="grade" id="math" type="number" value="" required>
+    <p>Оцінка з української мови</p>
+    <input class="grade" id="mova" type="number" value="" required>
+    <p>Ваше фото</p>
+    <input type="file" id="photo">
+    <input type="button" value="Перевірити" onclick="someFunc()">
+  </form>
+  <script type="text/javascript">
     function someFunc() {
       let result = `П.І.Б: ${document.getElementById("personaldata").value} <br>
                   Дата народження: ${document.getElementById("birthdate").value} <br>
@@ -63,9 +66,9 @@ width: 70;
     function someFunc2() {
       Win.close();
     }
-  
-</script>
+  </script>
 </body>
+
 </html>
 
 
