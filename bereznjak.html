@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Berznjak</title>
+</head>
+<body>
+	<form name="test">
+<p>Музичний інтервал в три ступені, також третя нота в гамі?</p>
+<input type="text" name="vopr1">
+<p>Який ключ використовують в музиці для гри нот праволю рукою? </p>
+<input type="radio" name="vopr2">Скрипковий<br>
+<input type="radio" name="vopr2">Басовий<br>
+<input type="radio" name="vopr2">Альтовий<br>
+<p>Які різновиди інтервалу октав розрізняють?</p>
+<input type="checkbox" name="vopr3">Велика октава<br>
+<input type="checkbox" name="vopr3">Чиста октава<br> 
+<input type="checkbox" name="vopr3">Збільшена октава<br>
+<p>Скільки ступенів діатонічного звукоряду охоплює октава?</p>
+<select name="vopr4"> 
+	<option value="1">1
+	<option value="2">2
+	<option value="4">4
+	<option value="7">7
+</select>
+<input type="button" value="Перевірити" onclick="check()">
+<span id="one"></span>
+</form>
+<script type="text/javascript">
+function check() {
+var i=0;
+if(document.test.vopr1.value=="терція") i++;
+if(document.test.vopr2[0].checked) i++;
+if(!document.test.vopr3[0].checked && document.test. vopr3[1].checked && document.test.vopr3[2].checked) i++;
+if(document.test.vopr4.value=="7") i++;
+document.getElementById("one").innerHTML("Ваша оцінка"+i);
+</script>
+</body>
+</html>
