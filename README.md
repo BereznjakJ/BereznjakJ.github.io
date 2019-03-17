@@ -1,2 +1,2 @@
-# BereznjakJ.github.io
+# Bereznjak.github.io
 Мій перший хостинг
